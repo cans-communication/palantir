@@ -58,7 +58,7 @@ func init() {
 		level = slog.LevelError
 	}
 
-	handler := slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{Level: level})
+	handler := slog.NewJSONHandler(os.Stderr, &slog.HandlerOptions{Level: level})
 
 	slogger = slog.New(handler)
 }
